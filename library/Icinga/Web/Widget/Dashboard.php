@@ -437,6 +437,7 @@ class Dashboard extends AbstractWidget
         if ($this->user === null) {
             throw new ProgrammingError('Can\'t load dashboards. User is not set');
         }
-        return Config::resolvePath('dashboards/' . $this->user->getUsername() . '/dashboard.ini');
+        return Config::resolvePath('dashboards/dashboard.ini');
+        //return Config::resolvePath('dashboards/' . $this->user->getUsername() . '/dashboard.ini');
     }
 }
